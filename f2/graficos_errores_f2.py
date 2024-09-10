@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Datos actualizados
 metodos = [
     '5 pts Equiespaciados\nInterpolación Lineal',
     '50 pts Equiespaciados\nInterpolación Lineal',
@@ -31,7 +30,6 @@ mediana_errores = [
 
 x = np.arange(len(metodos))
 
-# Gráfico de errores máximos (escala lineal)
 plt.figure(figsize=(10, 6))
 plt.bar(x, errores_maximos, color='skyblue')
 plt.xticks(x, metodos, rotation=90)
@@ -40,7 +38,6 @@ plt.title('Errores Máximos por Método de Interpolación')
 plt.tight_layout()
 plt.show()
 
-# Gráfico de medianas de errores (escala lineal)
 plt.figure(figsize=(10, 6))
 plt.bar(x, mediana_errores, color='lightgreen')
 plt.xticks(x, metodos, rotation=90)
